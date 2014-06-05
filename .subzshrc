@@ -45,6 +45,10 @@ function gclone() {
 }
 
 function gfast() {
-	message=$1
-	git add . && git commit -m $1 && git push
+	if [[ $# == 0 ]]; then
+	    echo "Usage gfast <message>"
+	else
+		message=$1
+		git add . && git commit -m $1 && git push
+	fi
 }
