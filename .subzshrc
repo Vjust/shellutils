@@ -57,3 +57,5 @@ function gfast() {
 git config --global alias.ac  '!git add -A && git commit'
 git config --global alias.acp '!git add -A && git commit && git push'
 git config --global alias.mad '!git add -A && git status'
+
+
