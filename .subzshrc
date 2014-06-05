@@ -1,3 +1,5 @@
+alias getsubzshrc="curl -L https://raw.githubusercontent.com/Vjust/shellutils/master/.subzshrc > .subzshrc" 
+
 setopt AUTO_CD
 
 HISTSIZE=1000
