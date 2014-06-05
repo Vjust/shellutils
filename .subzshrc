@@ -1,5 +1,38 @@
+setopt AUTO_CD
+
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+set histchars='@^#'
+setopt hist_verify
+setopt share_history
+setopt inc_append_history
+setopt hist_ignore_all_dups
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+
+#globbing
+setopt extended_glob
+
+
+
+
 alias tlis="tmux list-session"
 alias tatt="tmux attach-session -t 0"
+
+alias ll='ls -lF'
+alias lla='ls -laF'
+alias la='ls -aF'
+alias ls="ls --color=auto"
+alias -g L='|less'
+alias -g NUL="> /dev/null 2>&1"
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias sally1='source ~/.zshrc; cd; pwd;'
+
+
+
 
 
 # add this snippet to your bashrc file
@@ -9,4 +42,9 @@ function gclone() {
 	user=$1
 	project=$2.git
 	git clone git@github.com:${user}/${project}
+}
+
+function gfast() {
+	message=$1
+	git add . && git commit -m $1 && git push
 }
