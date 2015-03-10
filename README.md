@@ -1,5 +1,14 @@
-shellutils
-==========
+shellutils & tmux helpers
+===========================
+
+tmux startup (especially for virtualenvs)
+
++ tlux() is a shell function that can help manage multiple tmux sessions
+  helpful for ipython development
+  
++ tmux_startup.sh is a shell script that automates creation of tmux windows
+  Can be used as a template for any project
+
 
 Useful shell utilities
 
